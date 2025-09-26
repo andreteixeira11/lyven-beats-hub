@@ -22,22 +22,22 @@ export const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="hero-text gradient-hero bg-clip-text text-transparent">
-                WELCOME
+                DISCOVER
                 <br />
-                TO THE
+                THE BEST
                 <br />
-                <span className="text-foreground">FUTURE</span>
+                <span className="text-foreground">LIVE EVENTS</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
                 Incredible live shows. Upfront pricing. Relevant recommendations. 
-                Lyven makes discovering and attending events effortless.
+                Download Lyven and start discovering amazing events near you.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="lg" className="gap-3 text-lg px-8 py-6 h-auto">
                 <Smartphone className="h-5 w-5" />
-                GET THE APP
+                DOWNLOAD LYVEN
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto">
                 Browse Events

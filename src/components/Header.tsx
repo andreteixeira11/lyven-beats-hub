@@ -1,6 +1,7 @@
 import { Search, Menu, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import lyvenLogo from "@/assets/lyven-logo.png";
 
 export const Header = () => {
   return (
@@ -9,11 +10,12 @@ export const Header = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-8">
-            <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg gradient-primary">
-                <span className="text-white font-black text-lg">L</span>
-              </div>
-              <span className="text-2xl font-black tracking-tight">LYVEN</span>
+            <div className="flex items-center gap-3">
+              <img 
+                src={lyvenLogo} 
+                alt="LYVEN - Discover Feel Celebrate"
+                className="h-8 w-auto"
+              />
             </div>
 
             {/* Navigation */}

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Smartphone, Instagram, Twitter, Facebook } from "lucide-react";
+import lyvenLogo from "@/assets/lyven-logo.png";
 
 export const Footer = () => {
   return (
@@ -8,19 +9,20 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg gradient-primary">
-                <span className="text-white font-black text-lg">L</span>
-              </div>
-              <span className="text-2xl font-black tracking-tight text-background">LYVEN</span>
+            <div className="flex items-center gap-3">
+              <img 
+                src={lyvenLogo} 
+                alt="LYVEN - Discover Feel Celebrate"
+                className="h-8 w-auto"
+              />
             </div>
             <p className="text-background/70 leading-relaxed">
-              The future of event discovery. Find incredible live shows with upfront pricing 
-              and relevant recommendations.
+              The future of event discovery. Download Lyven to find incredible live shows 
+              with upfront pricing and relevant recommendations.
             </p>
             <Button variant="hero" size="sm" className="gap-2">
               <Smartphone className="h-4 w-4" />
-              Get the app
+              Download Lyven
             </Button>
           </div>
 
