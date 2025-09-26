@@ -1,4 +1,11 @@
 import { EventCard } from "./EventCard";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import event1 from "@/assets/event-1.jpg";
 import event2 from "@/assets/event-2.jpg";
 import event3 from "@/assets/event-3.jpg";
@@ -68,7 +75,7 @@ const mockEvents = [
   },
 ];
 
-export const EventsGrid = () => {
+export const EventsCarousel = () => {
   return (
     <section className="py-20 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -84,17 +91,46 @@ export const EventsGrid = () => {
             </p>
           </div>
 
-          {/* Events Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mockEvents.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
+          {/* Events Carousel */}
+          <div className="relative px-4 -mx-4">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: false,
+                dragFree: true,
+                containScroll: "trimSnaps",
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-2 md:-ml-4 touch-pan-x">
+                {mockEvents.map((event) => (
+                  <CarouselItem key={event.id} className="pl-2 md:pl-4 basis-72 md:basis-80 lg:basis-96">
+                    <EventCard event={event} />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="hidden md:block">
+                <CarouselPrevious className="absolute -left-6 top-1/2 -translate-y-1/2" />
+                <CarouselNext className="absolute -right-6 top-1/2 -translate-y-1/2" />
+              </div>
+            </Carousel>
+            
+            {/* Mobile swipe indicator */}
+            <div className="md:hidden flex items-center justify-center gap-2 mt-6 text-sm text-muted-foreground">
+              <div className="flex gap-1">
+                <div className="w-2 h-2 rounded-full bg-primary"></div>
+                <div className="w-2 h-2 rounded-full bg-muted"></div>
+                <div className="w-2 h-2 rounded-full bg-muted"></div>
+              </div>
+              <span>Swipe left for more</span>
+            </div>
           </div>
 
           {/* CTA */}
           <div className="text-center">
             <button className="text-primary font-semibold hover:underline text-lg transition-colors">
-              Browse all events →
+              <span className="hidden md:inline">Browse all events</span>
+              <span className="md:hidden">Swipe to explore more</span> →
             </button>
           </div>
         </div>
