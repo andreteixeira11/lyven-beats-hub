@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Smartphone, Instagram, Twitter, Facebook } from "lucide-react";
+import { Instagram, Twitter, Facebook } from "lucide-react";
 import lyvenLogo from "@/assets/lyven-logo.svg";
 
 export const Footer = () => {
@@ -20,10 +19,30 @@ export const Footer = () => {
               The future of event discovery. Download Lyven to find incredible live shows 
               with upfront pricing and relevant recommendations.
             </p>
-            <Button variant="hero" size="sm" className="gap-2 bg-white text-[#0099a8] hover:bg-white/90">
-              <Smartphone className="h-4 w-4" />
-              Download Lyven
-            </Button>
+            <div className="flex flex-col gap-3">
+              <a 
+                href="#" 
+                className="inline-block"
+                aria-label="Download on the App Store"
+              >
+                <img 
+                  src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" 
+                  alt="Download on the App Store" 
+                  className="h-12 w-auto"
+                />
+              </a>
+              <a 
+                href="#" 
+                className="inline-block"
+                aria-label="Get it on Google Play"
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                  alt="Get it on Google Play" 
+                  className="h-12 w-auto"
+                />
+              </a>
+            </div>
           </div>
 
           {/* Events */}
