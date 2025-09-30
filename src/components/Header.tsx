@@ -1,7 +1,7 @@
 import { Search, Menu, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import lyvenLogo from "@/assets/lyven-logo.png";
+import lyvenLogo from "@/assets/lyven-logo.svg";
 
 export const Header = () => {
   return (

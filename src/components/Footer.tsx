@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Smartphone, Instagram, Twitter, Facebook } from "lucide-react";
-import lyvenLogo from "@/assets/lyven-logo.png";
+import lyvenLogo from "@/assets/lyven-logo.svg";
 
 export const Footer = () => {
   return (
