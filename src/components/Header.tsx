@@ -12,11 +12,11 @@ import { SearchModal } from "./SearchModal";
 import { useState } from "react";
 
 const languages = [
-  { code: "pt", name: "Português" },
-  { code: "en", name: "English" },
-  { code: "fr", name: "Français" },
-  { code: "de", name: "Deutsch" },
-  { code: "es", name: "Español" },
+  { code: "pt", name: "🇵🇹 Português" },
+  { code: "en", name: "🇬🇧 English" },
+  { code: "fr", name: "🇫🇷 Français" },
+  { code: "de", name: "🇩🇪 Deutsch" },
+  { code: "es", name: "🇪🇸 Español" },
 ];
 
 export const Header = () => {
@@ -52,12 +52,6 @@ export const Header = () => {
               </div>
             </div>
 
-            {/* Navigation */}
-            <nav className="hidden lg:flex items-center gap-6">
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Browse events</a>
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Venues</a>
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Artists</a>
-            </nav>
 
             {/* Actions */}
             <div className="flex items-center gap-3 flex-shrink-0">
