@@ -1,4 +1,5 @@
 import { EventCard } from "./EventCard";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Carousel,
   CarouselContent,
@@ -76,6 +77,8 @@ const mockEvents = [
 ];
 
 export const EventsCarousel = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="py-20 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -83,11 +86,10 @@ export const EventsCarousel = () => {
           {/* Header */}
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-black tracking-tight">
-              Em Destaque em <span className="gradient-primary bg-clip-text text-transparent">Lisboa</span>
+              {t("events.trending")} <span className="gradient-primary bg-clip-text text-transparent">{t("events.city")}</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Descobre alguns dos eventos mais populares que vêm aí na tua cidade, 
-              desde noites de clube e concertos a showcases de artistas e performances intimistas.
+              {t("events.description")}
             </p>
           </div>
 
@@ -122,15 +124,15 @@ export const EventsCarousel = () => {
                 <div className="w-2 h-2 rounded-full bg-muted"></div>
                 <div className="w-2 h-2 rounded-full bg-muted"></div>
               </div>
-              <span>Desliza para mais</span>
+              <span>{t("events.swipe")}</span>
             </div>
           </div>
 
           {/* CTA */}
           <div className="text-center">
             <button className="text-primary font-semibold hover:underline text-lg transition-colors">
-              <span className="hidden md:inline">Explorar todos os eventos</span>
-              <span className="md:hidden">Desliza para explorar mais</span> →
+              <span className="hidden md:inline">{t("events.browseAll")}</span>
+              <span className="md:hidden">{t("events.swipeMore")}</span> →
             </button>
           </div>
         </div>

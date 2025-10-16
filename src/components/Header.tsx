@@ -10,6 +10,7 @@ import {
 import lyvenLogo from "@/assets/lyven-logo.svg";
 import { SearchModal } from "./SearchModal";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const languages = [
   { code: "pt", name: "🇵🇹 Português" },
@@ -21,7 +22,7 @@ const languages = [
 
 export const Header = () => {
   const [searchOpen, setSearchOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState("en");
+  const { language, setLanguage, t } = useLanguage();
 
   return (
     <>
@@ -45,7 +46,7 @@ export const Header = () => {
               >
                 <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground pointer-events-none" />
                 <Input
-                  placeholder="Pesquisar por evento, local ou cidade"
+                  placeholder={t("header.search")}
                   className="pl-10 bg-muted/50 border-0 focus-visible:ring-1 cursor-pointer"
                   readOnly
                 />
@@ -66,8 +67,8 @@ export const Header = () => {
                   {languages.map((lang) => (
                     <DropdownMenuItem
                       key={lang.code}
-                      onClick={() => setSelectedLang(lang.code)}
-                      className={selectedLang === lang.code ? "bg-muted" : ""}
+                      onClick={() => setLanguage(lang.code as any)}
+                      className={language === lang.code ? "bg-muted" : ""}
                     >
                       {lang.name}
                     </DropdownMenuItem>
@@ -76,11 +77,11 @@ export const Header = () => {
               </DropdownMenu>
 
               <Button variant="ghost" size="sm" className="hidden sm:inline-flex whitespace-nowrap">
-                Entrar / Registar
+                {t("header.login")}
               </Button>
               <Button variant="app" size="sm" className="gap-2 whitespace-nowrap">
                 <Smartphone className="h-4 w-4" />
-                <span className="hidden sm:inline">OBTER A APP</span>
+                <span className="hidden sm:inline">{t("header.getApp")}</span>
               </Button>
               <Button variant="ghost" size="icon" className="lg:hidden">
                 <Menu className="h-4 w-4" />

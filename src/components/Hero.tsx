@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Smartphone } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-image.jpg";
 import appMockup from "@/assets/app-mockup.jpg";
 
 export const Hero = () => {
+  const { t } = useLanguage();
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-muted/30">
       {/* Background Image */}
@@ -22,40 +24,39 @@ export const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="hero-text gradient-hero bg-clip-text text-transparent">
-                DESCOBRE
+                {t("hero.title1")}
                 <br />
-                OS MELHORES
+                {t("hero.title2")}
                 <br />
-                <span className="text-foreground">EVENTOS AO VIVO</span>
+                <span className="text-foreground">{t("hero.title3")}</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-                Espetáculos incríveis ao vivo. Preços transparentes. Recomendações relevantes. 
-                Descarrega o Lyven e começa a descobrir eventos fantásticos perto de ti.
+                {t("hero.description")}
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="lg" className="gap-3 text-lg px-8 py-6 h-auto">
                 <Smartphone className="h-5 w-5" />
-                DESCARREGAR LYVEN
+                {t("hero.download")}
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto">
-                Explorar Eventos
+                {t("hero.browse")}
               </Button>
             </div>
 
             <div className="flex items-center gap-8 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full gradient-primary"></div>
-                Sem taxas ocultas
+                {t("hero.noFees")}
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full gradient-primary"></div>
-                Bilhetes instantâneos
+                {t("hero.instant")}
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full gradient-primary"></div>
-                Melhores preços
+                {t("hero.bestPrices")}
               </div>
             </div>
           </div>

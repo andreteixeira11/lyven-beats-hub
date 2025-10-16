@@ -1,5 +1,6 @@
 import { Calendar, MapPin, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Event {
   id: string;
@@ -18,6 +19,8 @@ interface EventCardProps {
 }
 
 export const EventCard = ({ event }: EventCardProps) => {
+  const { t } = useLanguage();
+  
   return (
     <div className="group relative overflow-hidden rounded-2xl bg-card border border-border hover:shadow-elevated transition-smooth">
       {/* Image */}
@@ -69,7 +72,7 @@ export const EventCard = ({ event }: EventCardProps) => {
         </div>
 
         <Button className="w-full" variant="gradient">
-          Obter Bilhetes
+          {t("events.getTickets")}
         </Button>
       </div>
     </div>

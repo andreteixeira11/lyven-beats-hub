@@ -1,7 +1,9 @@
 import { Instagram, Twitter, Facebook } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import lyvenLogo from "@/assets/lyven-logo.svg";
 
 export const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer style={{ backgroundColor: '#0099a8' }} className="text-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
@@ -16,8 +18,7 @@ export const Footer = () => {
               />
             </div>
             <p className="text-white/80 leading-relaxed">
-              O futuro da descoberta de eventos. Descarrega o Lyven para encontrar espetáculos incríveis ao vivo 
-              com preços transparentes e recomendações relevantes.
+              {t("footer.description")}
             </p>
             <div className="flex flex-col gap-3">
               <a 
@@ -47,57 +48,57 @@ export const Footer = () => {
 
           {/* Events */}
           <div className="space-y-6">
-            <h3 className="font-bold text-white">Eventos</h3>
+            <h3 className="font-bold text-white">{t("footer.events")}</h3>
             <nav className="space-y-3">
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Explorar eventos
+                {t("footer.browseEvents")}
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Locais
+                {t("footer.venues")}
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Artistas
+                {t("footer.artists")}
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Categorias
+                {t("footer.categories")}
               </a>
             </nav>
           </div>
 
           {/* Company */}
           <div className="space-y-6">
-            <h3 className="font-bold text-white">Empresa</h3>
+            <h3 className="font-bold text-white">{t("footer.company")}</h3>
             <nav className="space-y-3">
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Sobre nós
+                {t("footer.about")}
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Carreiras
+                {t("footer.careers")}
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Imprensa
+                {t("footer.press")}
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Contacto
+                {t("footer.contact")}
               </a>
             </nav>
           </div>
 
           {/* Support */}
           <div className="space-y-6">
-            <h3 className="font-bold text-white">Suporte</h3>
+            <h3 className="font-bold text-white">{t("footer.support")}</h3>
             <nav className="space-y-3">
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Obter ajuda
+                {t("footer.help")}
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Segurança
+                {t("footer.safety")}
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Termos de serviço
+                {t("footer.terms")}
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Política de privacidade
+                {t("footer.privacy")}
               </a>
             </nav>
           </div>

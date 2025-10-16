@@ -2,6 +2,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { EventCard } from "./EventCard";
+import { useLanguage } from "@/contexts/LanguageContext";
 import event1 from "@/assets/event-1.jpg";
 import event2 from "@/assets/event-2.jpg";
 import event3 from "@/assets/event-3.jpg";
@@ -65,24 +66,26 @@ const popularEvents = [
 ];
 
 export const SearchModal = ({ open, onOpenChange }: SearchModalProps) => {
+  const { t } = useLanguage();
+  
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold">Pesquisar Eventos</DialogTitle>
+          <DialogTitle className="text-2xl font-bold">{t("search.title")}</DialogTitle>
         </DialogHeader>
         
         <div className="relative mb-6">
           <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
           <Input
-            placeholder="Pesquisar por evento, local ou cidade"
+            placeholder={t("header.search")}
             className="pl-12 h-12 text-lg"
             autoFocus
           />
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-foreground">Eventos Mais Populares</h3>
+          <h3 className="text-lg font-semibold text-foreground">{t("search.popular")}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {popularEvents.map((event) => (
               <EventCard key={event.id} event={event} />
