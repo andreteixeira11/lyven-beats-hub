@@ -22,40 +22,40 @@ export const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="hero-text gradient-hero bg-clip-text text-transparent">
-                DISCOVER
+                DESCOBRE
                 <br />
-                THE BEST
+                OS MELHORES
                 <br />
-                <span className="text-foreground">LIVE EVENTS</span>
+                <span className="text-foreground">EVENTOS AO VIVO</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-                Incredible live shows. Upfront pricing. Relevant recommendations. 
-                Download Lyven and start discovering amazing events near you.
+                Espetáculos incríveis ao vivo. Preços transparentes. Recomendações relevantes. 
+                Descarrega o Lyven e começa a descobrir eventos fantásticos perto de ti.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="lg" className="gap-3 text-lg px-8 py-6 h-auto">
                 <Smartphone className="h-5 w-5" />
-                DOWNLOAD LYVEN
+                DESCARREGAR LYVEN
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto">
-                Browse Events
+                Explorar Eventos
               </Button>
             </div>
 
             <div className="flex items-center gap-8 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full gradient-primary"></div>
-                No hidden fees
+                Sem taxas ocultas
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full gradient-primary"></div>
-                Instant tickets
+                Bilhetes instantâneos
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full gradient-primary"></div>
-                Best prices
+                Melhores preços
               </div>
             </div>
           </div>

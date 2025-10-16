@@ -83,11 +83,11 @@ export const EventsCarousel = () => {
           {/* Header */}
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-black tracking-tight">
-              Trending in <span className="gradient-primary bg-clip-text text-transparent">New York</span>
+              Em Destaque em <span className="gradient-primary bg-clip-text text-transparent">Lisboa</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Check out some of the most popular events coming up in your city, 
-              from club nights and gigs to artist showcases and intimate performances.
+              Descobre alguns dos eventos mais populares que vêm aí na tua cidade, 
+              desde noites de clube e concertos a showcases de artistas e performances intimistas.
             </p>
           </div>
 
@@ -122,15 +122,15 @@ export const EventsCarousel = () => {
                 <div className="w-2 h-2 rounded-full bg-muted"></div>
                 <div className="w-2 h-2 rounded-full bg-muted"></div>
               </div>
-              <span>Swipe left for more</span>
+              <span>Desliza para mais</span>
             </div>
           </div>
 
           {/* CTA */}
           <div className="text-center">
             <button className="text-primary font-semibold hover:underline text-lg transition-colors">
-              <span className="hidden md:inline">Browse all events</span>
-              <span className="md:hidden">Swipe to explore more</span> →
+              <span className="hidden md:inline">Explorar todos os eventos</span>
+              <span className="md:hidden">Desliza para explorar mais</span> →
             </button>
           </div>
         </div>

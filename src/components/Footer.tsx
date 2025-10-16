@@ -16,8 +16,8 @@ export const Footer = () => {
               />
             </div>
             <p className="text-white/80 leading-relaxed">
-              The future of event discovery. Download Lyven to find incredible live shows 
-              with upfront pricing and relevant recommendations.
+              O futuro da descoberta de eventos. Descarrega o Lyven para encontrar espetáculos incríveis ao vivo 
+              com preços transparentes e recomendações relevantes.
             </p>
             <div className="flex flex-col gap-3">
               <a 
@@ -47,57 +47,57 @@ export const Footer = () => {
 
           {/* Events */}
           <div className="space-y-6">
-            <h3 className="font-bold text-white">Events</h3>
+            <h3 className="font-bold text-white">Eventos</h3>
             <nav className="space-y-3">
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Browse events
+                Explorar eventos
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Venues
+                Locais
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Artists
+                Artistas
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Categories
+                Categorias
               </a>
             </nav>
           </div>
 
           {/* Company */}
           <div className="space-y-6">
-            <h3 className="font-bold text-white">Company</h3>
+            <h3 className="font-bold text-white">Empresa</h3>
             <nav className="space-y-3">
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                About us
+                Sobre nós
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Careers
+                Carreiras
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Press
+                Imprensa
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Contact
+                Contacto
               </a>
             </nav>
           </div>
 
           {/* Support */}
           <div className="space-y-6">
-            <h3 className="font-bold text-white">Support</h3>
+            <h3 className="font-bold text-white">Suporte</h3>
             <nav className="space-y-3">
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Get help
+                Obter ajuda
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Safety
+                Segurança
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Terms of service
+                Termos de serviço
               </a>
               <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                Privacy policy
+                Política de privacidade
               </a>
             </nav>
           </div>

@@ -69,7 +69,7 @@ export const EventCard = ({ event }: EventCardProps) => {
         </div>
 
         <Button className="w-full" variant="gradient">
-          Get Tickets
+          Obter Bilhetes
         </Button>
       </div>
     </div>

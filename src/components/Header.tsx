@@ -45,7 +45,7 @@ export const Header = () => {
               >
                 <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground pointer-events-none" />
                 <Input
-                  placeholder="Search by event, venue or city"
+                  placeholder="Pesquisar por evento, local ou cidade"
                   className="pl-10 bg-muted/50 border-0 focus-visible:ring-1 cursor-pointer"
                   readOnly
                 />
@@ -76,11 +76,11 @@ export const Header = () => {
               </DropdownMenu>
 
               <Button variant="ghost" size="sm" className="hidden sm:inline-flex whitespace-nowrap">
-                Log in / Sign up
+                Entrar / Registar
               </Button>
               <Button variant="app" size="sm" className="gap-2 whitespace-nowrap">
                 <Smartphone className="h-4 w-4" />
-                <span className="hidden sm:inline">GET THE APP</span>
+                <span className="hidden sm:inline">OBTER A APP</span>
               </Button>
               <Button variant="ghost" size="icon" className="lg:hidden">
                 <Menu className="h-4 w-4" />

@@ -69,20 +69,20 @@ export const SearchModal = ({ open, onOpenChange }: SearchModalProps) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold">Search Events</DialogTitle>
+          <DialogTitle className="text-2xl font-bold">Pesquisar Eventos</DialogTitle>
         </DialogHeader>
         
         <div className="relative mb-6">
           <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
           <Input
-            placeholder="Search by event, venue or city"
+            placeholder="Pesquisar por evento, local ou cidade"
             className="pl-12 h-12 text-lg"
             autoFocus
           />
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-foreground">Most Popular Events</h3>
+          <h3 className="text-lg font-semibold text-foreground">Eventos Mais Populares</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {popularEvents.map((event) => (
               <EventCard key={event.id} event={event} />
