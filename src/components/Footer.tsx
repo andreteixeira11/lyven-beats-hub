@@ -20,6 +20,11 @@ export const Footer = () => {
             <p className="text-white/80 leading-relaxed">
               {t("footer.description")}
             </p>
+          </div>
+
+          {/* Download Apps */}
+          <div className="space-y-6">
+            <h3 className="font-bold text-white">{t("footer.download")}</h3>
             <div className="flex flex-col gap-3">
               <a 
                 href="#" 
@@ -65,25 +70,6 @@ export const Footer = () => {
             </nav>
           </div>
 
-          {/* Company */}
-          <div className="space-y-6">
-            <h3 className="font-bold text-white">{t("footer.company")}</h3>
-            <nav className="space-y-3">
-              <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                {t("footer.about")}
-              </a>
-              <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                {t("footer.careers")}
-              </a>
-              <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                {t("footer.press")}
-              </a>
-              <a href="#" className="block text-white/80 hover:text-white transition-colors">
-                {t("footer.contact")}
-              </a>
-            </nav>
-          </div>
-
           {/* Support */}
           <div className="space-y-6">
             <h3 className="font-bold text-white">{t("footer.support")}</h3>
@@ -107,7 +93,7 @@ export const Footer = () => {
         {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-white/80 text-sm">
-            © 2024 Lyven. All rights reserved.
+            © 2025 Lyven. All rights reserved.
           </p>
           
           <div className="flex items-center gap-4">
