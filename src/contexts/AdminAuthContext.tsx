@@ -36,22 +36,44 @@ export const AdminAuthProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const login = async (email: string, password: string) => {
-    const response = await fetch(`${API_BASE}/auth/login`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
-    });
-
-    if (!response.ok) {
-      throw new Error('Credenciais inválidas');
+    // Verificar credenciais locais primeiro
+    if (email === 'geral@lyven.pt' && password === 'Lyven2025') {
+      const mockUser = {
+        id: 'admin_1',
+        name: 'Administrador Lyven',
+        email: 'geral@lyven.pt',
+        userType: 'admin'
+      };
+      const mockToken = 'lyven_admin_token_' + Date.now();
+      
+      setToken(mockToken);
+      setUser(mockUser);
+      localStorage.setItem('admin_token', mockToken);
+      localStorage.setItem('admin_user', JSON.stringify(mockUser));
+      return;
     }
 
-    const data = await response.json();
-    
-    setToken(data.token);
-    setUser(data.user);
-    localStorage.setItem('admin_token', data.token);
-    localStorage.setItem('admin_user', JSON.stringify(data.user));
+    // Tentar autenticação via API
+    try {
+      const response = await fetch(`${API_BASE}/auth/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+
+      if (!response.ok) {
+        throw new Error('Credenciais inválidas');
+      }
+
+      const data = await response.json();
+      
+      setToken(data.token);
+      setUser(data.user);
+      localStorage.setItem('admin_token', data.token);
+      localStorage.setItem('admin_user', JSON.stringify(data.user));
+    } catch (error) {
+      throw new Error('Credenciais inválidas');
+    }
   };
 
   const logout = () => {
