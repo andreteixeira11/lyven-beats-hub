@@ -84,7 +84,7 @@ export const Header = () => {
                 className="hidden md:inline-flex whitespace-nowrap"
                 onClick={() => navigate('/advertise')}
               >
-                Anunciar Evento
+                {t("header.advertise")}
               </Button>
               <Button variant="ghost" size="sm" className="hidden sm:inline-flex whitespace-nowrap">
                 {t("header.login")}
