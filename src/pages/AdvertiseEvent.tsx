@@ -9,6 +9,8 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
 import { Globe, CreditCard, Ticket, ThumbsUp } from "lucide-react";
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
 
 export default function AdvertiseEvent() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -29,10 +31,10 @@ export default function AdvertiseEvent() {
     setIsSubmitting(true);
 
     try {
-      // Configurar EmailJS (IDs públicos que o utilizador precisa configurar)
-      const serviceId = "service_lyven"; // O utilizador precisa criar isto no EmailJS
-      const templateId = "template_advertise"; // O utilizador precisa criar isto no EmailJS
-      const publicKey = "YOUR_PUBLIC_KEY"; // O utilizador precisa adicionar isto
+      // Configurar EmailJS
+      const serviceId = "service_foa7u6j";
+      const templateId = "template_jio46ng";
+      const publicKey = "AQyCUd5L3_1sL0Uzb";
 
       const templateParams = {
         to_email: "info@lyven.pt",
@@ -208,14 +210,13 @@ export default function AdvertiseEvent() {
 
             <div className="space-y-2">
               <Label htmlFor="phone">Telefone *</Label>
-              <Input
-                id="phone"
-                name="phone"
-                type="tel"
+              <PhoneInput
+                international
+                defaultCountry="PT"
                 value={formData.phone}
-                onChange={handleChange}
+                onChange={(value) => setFormData({ ...formData, phone: value || "" })}
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                 required
-                placeholder="+351 900 000 000"
               />
             </div>
 
