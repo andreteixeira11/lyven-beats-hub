@@ -11,6 +11,7 @@ import lyvenLogo from "@/assets/lyven-logo.svg";
 import { SearchModal } from "./SearchModal";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useNavigate } from "react-router-dom";
 
 const languages = [
   { code: "pt", name: "🇵🇹 Português" },
@@ -23,6 +24,7 @@ const languages = [
 export const Header = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -76,6 +78,14 @@ export const Header = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
 
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="hidden md:inline-flex whitespace-nowrap"
+                onClick={() => navigate('/advertise')}
+              >
+                Anunciar Evento
+              </Button>
               <Button variant="ghost" size="sm" className="hidden sm:inline-flex whitespace-nowrap">
                 {t("header.login")}
               </Button>
